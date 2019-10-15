@@ -95,4 +95,13 @@
   * [1. 实例----用3层交换机划分子网](path4/1..md)
   * [2. 实例----交换机VLAN的划分](path4/2..md)
   * [3. 实例----交换机SVI接口的定义](path4/3..md)
+* [VSU配置](vsu/README.md)
+  * [10.x版本](vsu/10.x/README.md)
+    * [1. VSU基本配置](vsu/10.x/1.-vsu-ji-ben-pei-zhi.md)
+    * [2. VSU优化配置](vsu/10.x/2.-vsu-you-hua-pei-zhi.md)
+    * [3. 三台交换机VSU组网案例](vsu/10.x/3.-san-tai-jiao-huan-ji-vsu-zu-wang-an-li.md)
+  * [11.x版本](vsu/11.x/README.md)
+    * [1. VSU基本配置](vsu/11.x/1.-vsu-ji-ben-pei-zhi.md)
+    * [2. VSU优化配置](vsu/11.x/2.-vsu-you-hua-pei-zhi.md)
+    * [3. 三台交换机VSU组网案例](vsu/11.x/3.-san-tai-jiao-huan-ji-vsu-zu-wang-an-li.md)
 
