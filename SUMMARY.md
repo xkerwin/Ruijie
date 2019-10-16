@@ -104,7 +104,7 @@
     * [1. VSU基本配置](vsu/11.x/1.-vsu-ji-ben-pei-zhi.md)
     * [2. VSU优化配置](vsu/11.x/2.-vsu-you-hua-pei-zhi.md)
     * [3. 三台交换机VSU组网案例](vsu/11.x/3.-san-tai-jiao-huan-ji-vsu-zu-wang-an-li.md)
-* [端口防环](duan-kou-fang-huan/README.md)
-  * [端口防环路RLDP功能介绍及配置](duan-kou-fang-huan/untitled.md)
-  * [环路排查方法](duan-kou-fang-huan/huan-lu-pai-cha-fang-fa.md)
+* [端口防环](rldp/README.md)
+  * [端口防环路RLDP功能介绍及配置](rldp/duankou-fang-huan-lu.md)
+  * [环路排查方法](rldp/huan-lu-pai-cha-fang-fa.md)
 
