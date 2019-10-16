@@ -14,25 +14,25 @@ RLDP功能主要是应用到接入层交换机上做环路检测用（汇聚层�
 
 网络中一般二层环路有如下几种常见的情形：
 
-情形一：三角环路\(两台核心都连接同一台接入\)
+**情形一：**三角环路\(两台核心都连接同一台接入\)
 
 ![](https://yixiu.ruijie.com.cn:8902/ueditor/jsp/upload/image/move_20180918/exchange/4a607e64-6d2b-4f1f-bea5-56f60f62c61f_files/97691069_1ae80408_0.png)
 
 对于这种环路情形，可以通过在三台交换机之间运行MSTP实现环路切换与线路冗余，具体可以参见典型应用场景中“MSTP+VRRP+FW”部分相关章节
 
-情形二：核心两根线都连接到同一台接入交换机
+**情形二：**核心两根线都连接到同一台接入交换机
 
 ![](https://yixiu.ruijie.com.cn:8902/ueditor/jsp/upload/image/move_20180918/exchange/4a607e64-6d2b-4f1f-bea5-56f60f62c61f_files/97691069_1aed0409_0.png)
 
 对于这种环路情形可以通过在核心交换机和接入交换机上配置二层链路聚合来实现链路冗余，具体可以参见端口聚合章节
 
-情形三：同一根线的头尾两端都插到交换机的两个端口
+**情形三：**同一根线的头尾两端都插到交换机的两个端口
 
 ![](https://yixiu.ruijie.com.cn:8902/ueditor/jsp/upload/image/move_20180918/exchange/4a607e64-6d2b-4f1f-bea5-56f60f62c61f_files/97691069_1af2040a_0.png)
 
 对于防止这种网络环路，可以通过RLDP或BPDU Guard功能实现
 
-情形四：接入交换机连接傻瓜式交换机，傻瓜式交换机上的两个端口环路
+**情形四：**接入交换机连接傻瓜式交换机，傻瓜式交换机上的两个端口环路
 
 ![](https://yixiu.ruijie.com.cn:8902/ueditor/jsp/upload/image/move_20180918/exchange/4a607e64-6d2b-4f1f-bea5-56f60f62c61f_files/97691069_1af7040b_0.png)
 
@@ -126,7 +126,7 @@ Rujijie#wr
 Rujijie#
 *Mar 19 20:16:00: %RLDP-3-LINK_DETECT_ERROR: loop detection error detect on interface GigabitEthernet 0/7.set this interface errordisable!
 *Mar 19 20:16:00: %RLDP-3-LINK_DETECT_ERROR: loop detection error detect on interface GigabitEthernet 0/5.set this interface errordisable!
-Mar 19 20:16:01: %LINEPROTO-5-UPDOWN: Line protocol on Interface VLAN 1, changed state to down.
+*Mar 19 20:16:01: %LINEPROTO-5-UPDOWN: Line protocol on Interface VLAN 1, changed state to down.
 *Mar 19 20:16:02: %LINK-3-UPDOWN: Interface GigabitEthernet 0/5, changed state to down.
 *Mar 19 20:16:02: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet 0/5, changed state to down.
 *Mar 19 20:16:02: %LINK-3-UPDOWN: Interface GigabitEthernet 0/7, changed state to down.
