@@ -94,7 +94,7 @@
     * [5.1 扫描攻击概述](jiao-huan-chan-pin/path3/5.-pei-zhi-fang-fan-sao-miao-gong-ji-de-xi-tong-bao-hu/5.1-sao-miao-gong-ji-gai-shu.md)
     * [5.2 在三层交换机上配置系统保护](jiao-huan-chan-pin/path3/5.-pei-zhi-fang-fan-sao-miao-gong-ji-de-xi-tong-bao-hu/5.2-zai-san-ceng-jiao-huan-ji-shang-pei-zhi-xi-tong-bao-hu.md)
     * [5.3 系统保护信息的查看](jiao-huan-chan-pin/path3/5.-pei-zhi-fang-fan-sao-miao-gong-ji-de-xi-tong-bao-hu/5.3-xi-tong-bao-hu-xin-xi-de-cha-kan.md)
-* [第四部分：交换机配置举例](jiao-huan-chan-pin/path4/README.md)
+* [第四部分：交换机的配置举例](jiao-huan-chan-pin/path4/README.md)
   * [1. 实例----用3层交换机划分子网](jiao-huan-chan-pin/path4/1.-shi-li-yong-3-ceng-jiao-huan-ji-hua-fen-zi-wang.md)
   * [2. 实例----交换机VLAN的划分](jiao-huan-chan-pin/path4/2.-shi-li-jiao-huan-ji-vlan-de-hua-fen.md)
   * [3. 实例----交换机SVI接口的定义](jiao-huan-chan-pin/path4/3.-shi-li-jiao-huan-ji-svi-jie-kou-de-ding-yi.md)
