@@ -4,7 +4,7 @@
 
 ## 交换产品
 
-* [第一部分：交换机概述](jiao-huan-chan-pin/path1/README.md)
+* [第一部分：交换机的概述](jiao-huan-chan-pin/path1/README.md)
   * [1. 交换机的几种配置方法](jiao-huan-chan-pin/path1/1.-jiao-huan-ji-de-ji-zhong-pei-zhi-fang-fa/README.md)
     * [1.1 控制台](jiao-huan-chan-pin/path1/1.-jiao-huan-ji-de-ji-zhong-pei-zhi-fang-fa/1.1-kong-zhi-tai.md)
     * [1.2 远程登录](jiao-huan-chan-pin/path1/1.-jiao-huan-ji-de-ji-zhong-pei-zhi-fang-fa/1.2-yuan-cheng-deng-lu.md)
