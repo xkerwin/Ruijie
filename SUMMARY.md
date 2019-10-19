@@ -115,4 +115,5 @@
 ## 无线产品
 
 * [AC旁挂核心配置（AC-核心）](wu-xian-chan-pin/ac-core.md)
+* [无线产品查看命令](wu-xian-chan-pin/wu-xian-chan-pin-cha-kan-ming-ling.md)
 
