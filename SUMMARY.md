@@ -1,8 +1,6 @@
 # Table of contents
 
 * [Home](README.md)
-* [网络基本功](https://kerwin.gitbook.io/network-basic/)
-* [Document](https://kerwin.gitbook.io/document/)
 
 ## 交换产品
 
@@ -119,4 +117,9 @@
 
 * [AC旁挂核心配置（AC-核心）](wu-xian-chan-pin/ac-core.md)
 * [无线产品查看命令](wu-xian-chan-pin/wu-xian-chan-pin-cha-kan-ming-ling.md)
+
+## 外部链接
+
+* [Document](https://kerwin.gitbook.io/document/)
+* [网络基本功](https://kerwin.gitbook.io/network-basic/)
 
