@@ -1,13 +1,10 @@
 # 无线产品常用命令
 
-
-
 ### 1. AC常见维护命令
 
 #### 1.1 查看AC与AP建立隧道的情况
 
 ```cpp
-// 查看AC与AP建立隧道的情况
 Ruijie#show capwap state
 CAPWAP tunnel state, 2 peers, 2 is run:
 Index     Peer IP              Port      State         Mac Address
@@ -19,7 +16,6 @@ Index     Peer IP              Port      State         Mac Address
 #### 1.2 查看AP的配置
 
 ```cpp
-//查看AP的配置
 Ruijie#show ap-config running
 Building configuration...
 Current configuration: 535 bytes
@@ -47,7 +43,6 @@ ap-config "AP名称"
 #### 1.3 查看特定AP的配置
 
 ```cpp
-//查看特定AP的配置
 Ruijie#show ap-config running "AP名称"
 Building configuration...
 Current configuration: 243 bytes
@@ -72,7 +67,6 @@ ap-config "AP名称"
 #### 1.4 查看ap工作信道及功率等射频参数
 
 ```cpp
-//查看ap工作信道及功率等射频参数
 Ruijie#show ap-config summary
 ========= show ap status =========
 Radio: Radio ID or Band: 2.4G = 1#, 5G = 2#
@@ -95,7 +89,6 @@ ruijie   192.168.0.1   8005.889f.3dd9  1 E 3 1 100   1 E 5 157 100   26:03:52:32
 #### 1.5 查看已关联的无线用户
 
 ```cpp
-//查看已关联的无线用户
 Ruijie#show ac-config client  by-ap-name
 ========= show sta status =========
 AP    : ap name/radio id
@@ -113,7 +106,6 @@ STA MAC         IPV4 Address   AP     Wlan Vlan Status       Asso Auth  Net Auth
 #### 1.6 查看已经关联的无线用户的详细信息，mac、ip、vlan、wlan、漫游状态、关联的AP名称和IP等等
 
 ```cpp
-//查看已经关联的无线用户的详细信息，mac、ip、vlan、wlan、漫游状态、关联的AP名称和IP等等
 Ruijie#show ac-config client detail 0c54.15db.b74e
 Mac Address         :0c54.15db.b74e
 IP Address          :192.168.0.117
@@ -130,7 +122,6 @@ AP IP               :192.168.0.120
 #### 1.7 查看无线客户端连接状态，认证状态
 
 ```cpp
-//查看无线客户端连接状态，认证状态
 Ruijie#show wlan stainfo summary
 total stainfo number: 16 //连接数量
 INDEX    MAC-address          WLAN ID  Wireless-state   PTK-state  PMF
@@ -157,7 +148,6 @@ INDEX    MAC-address          WLAN ID  Wireless-state   PTK-state  PMF
 #### 1.8 查看无线用户的加密方式
 
 ```cpp
-//查看无线用户的加密方式
 Ruijie#show wclient security "5013.9514.44a3" //无线客户端MAC地址
 Security policy finished      : TRUE //安全策略
 Security policy type          : PSK //安全类型
@@ -169,7 +159,6 @@ Security EAP type             : NONE //EAP安全类型
 #### 1.9 查看无线AC的硬件信息
 
 ```cpp
-//查看无线AC的硬件信息
 Ruijie#show ac-device information
 AC device information:
    CPU type         : MIPS 1004Kc V2.15, 292MHz //CPU信息
@@ -179,8 +168,7 @@ AC device information:
 
 #### 1.10 查看已关联到AC上的AP硬件信息
 
-```text
-//查看已关联到AC上的AP硬件信息
+```cpp
 Ruijie#show ap-device information
 AP(name)s device information:
   CPU type         : MIPS 74Kc V5.0, 386MHz //CPU信息
@@ -194,15 +182,13 @@ AP(name)s device information:
 #### 2.1 如何查看ap当前的工作模式
 
 ```cpp
-//如何查看ap当前的工作模式
 Ruijie>show ap-mode
 current mode: fit //fit是瘦模式，fat是胖模式
 ```
 
 #### 2.2 如何获取AP设备本身的MAC地址（非物理接口mac）
 
-```text
-//如何获取AP设备本身的MAC地址（非物理接口mac）
+```cpp
 查找AP MAC地址有以下几种方法：
 1.AP外壳机身贴纸上可以看到设备的MAC地址
 2.在AC上"show version all"或"sho ap-device information"可以看到AP的MAC地址
@@ -211,8 +197,7 @@ current mode: fit //fit是瘦模式，fat是胖模式
 
 #### 2.3 AP下如何查看无线客户端
 
-```text
-//AP下如何查看无线客户端
+```cpp
 Ruijie>show dot11 associations all-client
 RADIO-ID WLAN-ID ADDR              AID  CHAN RATE_DOWN RATE_UP RSSI ASSOC_TIME IDLE TXSEQ  RXSEQ  ERP  STATE  CAPS HTCAPS VHT_MU_CAP
 -------- ------- ----------------- ---- ---- --------- ------- ---- ---------- ---- -----  -----  ---  -----  ---- ------ ----------
@@ -244,7 +229,6 @@ RADIO-ID WLAN-ID ADDR              AID  CHAN RATE_DOWN RATE_UP RSSI ASSOC_TIME I
 #### 2.4 查看AP和AC的capwap隧道建立情况
 
 ```cpp
-//查看AP和AC的capwap隧道建立情况
 Ruijie#show capwap state
 CAPWAP tunnel state, 1 peers, 1 is run:
 Index     Peer IP              Port      State
@@ -253,8 +237,7 @@ Index     Peer IP              Port      State
 
 #### 2.5 查看AP的版本及运行时间，来排查AP是否重启过
 
-```text
-//查看AP的版本及运行时间，来排查AP是否重启过
+```cpp
 Ruijie#show version
 System description      : Ruijie Indoor AP720-L (802.11a/n/ac and 802.11b/g/n) By Ruijie Networks. //AP信息描述
 System start time       : 2019-10-23 15:59:46 //AP启动时间
@@ -268,8 +251,7 @@ System boot version     : 2.0.26 //AP boot版本
 
 #### 2.6 查看该AP的BSSID及radio相关信息
 
-```text
-//查看该AP的BSSID及radio相关信息
+```cpp
 Ruijie#show dot11 wireless 1/0
 Network Name (SSID): NULL //对应BBS标识
     Interface.................... Dot11radio 1/0 //接口名称
@@ -315,7 +297,6 @@ Total Stations:
 #### 3.1 如何修改AP名称
 
 ```cpp
-//如何修改AP名称
 AP与WS无线控制器关联后，默认的名称为AP机身背面所贴标签上的MAC地址。
 若需要修改AP的名称，则进行如下操作：
 Ruijie(config)#ap-configaaaa.aaaa.aaaa
@@ -325,8 +306,7 @@ Ruijie(config-ap)#ap-name ap-name
 #### 3.2 如何删除已经下线的AP名称
 
 ```cpp
-//如何删除已经下线的AP名称
-进行如下操作：
+//进行如下操作：
 Ruijie(config)#noap-config ap-name //删除单个
 Ruijie(config)#noap-config all //删除所有不在线的ap-config
 //只有已经下线的AP的配置才能被删除。
@@ -335,7 +315,6 @@ Ruijie(config)#noap-config all //删除所有不在线的ap-config
 #### 3.3 如何配置瘦AP的位置信息
 
 ```cpp
-//如何配置瘦AP的位置信息
 //参考配置如下：
 Ruijie(config)#ap-config 001a.a9bf.ffdc
 Ruijie(config-ap)#location 会议室
@@ -344,8 +323,7 @@ Ruijie(config-ap)#location 会议室
 #### 3.4 如何修改AC建立capwap隧道使用的地址
 
 ```cpp
-//如何修改AC建立capwap隧道使用的地址
-需要升级到1B19及1B19以上版本
+//需要升级到1B19及1B19以上版本
 Ruijie(config)#ac-controller
 Ruijie(config-ac)#capwapctrl-ip 2.2.2.2
 ```
@@ -353,8 +331,7 @@ Ruijie(config-ac)#capwapctrl-ip 2.2.2.2
 #### 3.5 在瘦AP模式下静态配置AP的IP地址
 
 ```cpp
-//在瘦AP模式下静态配置AP的IP地址
-参考命令：（修改该参数会导致AP重新建立隧道）
+//参考命令：（修改该参数会导致AP重新建立隧道）
 1.通过console或telnet登入到AP，进入全局模式（enable密码是apdebug）给AP配置静态IP地址、默认路由、ACIP地址 ：
 Ruijie(config)#acipipv4 1.1.1.1 //配置AC IP地址
 Ruijie(config)#apip172.16.1.34 255.255.255.0 172.16.1.109
@@ -370,8 +347,7 @@ Ruijie(config-ap)#ipaddress 172.16.1.34 255.255.255.0 172.16.1.109 //AP的地址
 #### 3.6 瘦AP如何切换工作频段
 
 ```cpp
-//瘦AP如何切换工作频段
-参考命令：
+//参考命令：
 Ruijie(config)#ap-config 001a.a9bf.ffdc
 Ruijie(config-ap)#radio-type 2 802.11b
 //注：目前只有AP220-E 1.x、AP220-SE1.x、AP620-H 1.x 、AP220-E(M)-V2、AP120-W、AP3220-P、AP530-I v1.5x、AP740-I第三射频卡 支持射频卡工作频段的切换，其他AP射频卡工作频段均是固定，无法修改。
@@ -380,7 +356,6 @@ Ruijie(config-ap)#radio-type 2 802.11b
 #### 3.7 如何关闭802.11n功能
 
 ```cpp
-//如何关闭802.11n功能
 Ruijie(config)# ap-config  AP0001
 Ruijie(config-ap)#no 11ngsupport enableradio 1 //关闭radio 1在2.4G下支持802.11n功能
 Ruijie(config-ap)#no 11nasupport enableradio 2 //关闭radio 2在5G下支持802.11n功能
@@ -389,7 +364,6 @@ Ruijie(config-ap)#no 11nasupport enableradio 2 //关闭radio 2在5G下支持802.
 #### 3.8 如何关闭802.11b功能
 
 ```cpp
-//如何关闭802.11b功能
 10.4(1b19)开始支持：
 Ruijie(config)# ap-config  AP0001
 Ruijie(config-ap)#no 11bsupport enableradio 1 //关闭radio 1在2.4G下支持802.11n功能
@@ -398,7 +372,6 @@ Ruijie(config-ap)#no 11bsupport enableradio 1 //关闭radio 1在2.4G下支持802
 #### 3.9 瘦模式如何禁用AP的某个radio
 
 ```cpp
-//瘦模式如何禁用AP的某个radio
 Ruijie(config)#ap-config ap-name //进入对应AP
 Ruijie(config-ap)#no enable-radio 1 //禁用radio 1
 ```
@@ -406,7 +379,6 @@ Ruijie(config-ap)#no enable-radio 1 //禁用radio 1
 #### 3.10 推荐将11b/g 1M、2M、5M，11a6M、9M 等低速率集进行关闭，避免个别用户发送过多低速报文影响整体无线性能。
 
 ```cpp
-//推荐将11b/g 1M、2M、5M，11a6M、9M 等低速率集进行关闭，避免个别用户发送过多低速报文影响整体无线性能。
 Ruijie(config)#ac-controller
 Ruijie(config-ac)#802.11b network  rate 1 disabled
 Ruijie(config-ac)#802.11b network  rate 2 disabled
@@ -421,7 +393,6 @@ Ruijie(config-ac)#802.11a network  rate 9 disabled
 #### 3.11 配置AC的设备时间同步给AP
 
 ```cpp
-//配置AC的设备时间同步给AP
 Ruijie(config)# ap-config  AP0001 //进入指定AP的配置模式
 Ruijie(config-ap)#timestamp //配置AP0001 同步本AC的时间
 ```
@@ -431,7 +402,6 @@ Ruijie(config-ap)#timestamp //配置AP0001 同步本AC的时间
 #### 4.1 如何查看AP或AC web服务是否有打开，以及使用哪些端口
 
 ```cpp
-//如何查看AP或AC web服务是否有打开，以及使用哪些端口
 Ruijie#show web-service / status //EG不用加status
 webservice  :
   http      : enable //enable"启用"，disable"关闭"
@@ -445,7 +415,6 @@ webservice  :
 #### 4.2 如何修改AP或AC web登入的端口
 
 ```cpp
-//如何修改AP或AC web登入的端口
 Ruijie(config)#ip http port 8080 //(11.x)设备web登入的端口号从80更改为8080
 Ruijie(config)#http port 8080 //(10.x)设备web登入的端口号从80更改为8080
 ```
@@ -453,14 +422,12 @@ Ruijie(config)#http port 8080 //(10.x)设备web登入的端口号从80更改为8
 #### 4.3 如何修改AC或者AP的web登入密码
 
 ```cpp
-//如何修改AC或者AP的web登入密码
 Ruijie(config)#webmaster level 0 username "admin" password "admin" //设置用户名密码都为admin
 ```
 
 #### 4.4 AC上如何关闭瘦AP的web管理功能
 
 ```cpp
-//AC上如何关闭瘦AP的web管理功能
 Ruijie(config)#ap-config "xxx" //xxx可以为ap的名称/MAC地址，则是对单个AP生效，xxx可以是all，则是对全部AP生效
 Ruijie(config-ap)#exec-cmd mode config cmd "no enable service web-server"
 ```
@@ -468,7 +435,6 @@ Ruijie(config-ap)#exec-cmd mode config cmd "no enable service web-server"
 #### 4.5 AC上如何关闭瘦AP的telnet功能
 
 ```cpp
-//AC上如何关闭瘦AP的telnet功能
 Ruijie(config)#ap-config "xxx" //xxx可以为ap的名称/MAC地址，则是对单个AP生效，xxx可以是all，则是对全部AP生效
 Ruijie(config-ap)#exec-cmd mode config cmd "no enable service telnet-server"
 ```
@@ -476,7 +442,6 @@ Ruijie(config-ap)#exec-cmd mode config cmd "no enable service telnet-server"
 #### 4.6 AC上如何修改瘦AP web登入密码
 
 ```cpp
-//AC上如何修改瘦AP web登入密码
 1.先建立一个ap-webmaster.txt的记事本，内容如下：
 Ruijie(config)#webmaster level 0 username admin password "actest" //web登入的密码修改为actest
 2.把这个ap-webmaster.txt文件上传到AC的flash上：
@@ -489,7 +454,6 @@ Ruijie(config-ap)#auto-cfg file flash:ap-webmaster.txt force
 #### 4.7 AC上如何修改瘦AP telnet使用用户名和密码登入
 
 ```cpp
-//AC上如何修改瘦AP telnet使用用户名和密码登入
 Ruijie(config)#ap-config xxx
 Ruijie(config-ap)#credential admin ruijie //telnet使用用户名admin密码ruijie登入
 //xxx可以为ap的名称/MAC地址，则是对单个AP生效，xxx可以是all，则是对全部AP生效，也可以在ap-group组底下配置，对组底下的AP生效，
@@ -499,7 +463,6 @@ Ruijie(config-ap)#credential admin ruijie //telnet使用用户名admin密码ruij
 #### 4.8 AP如何恢复出厂设置
 
 ```cpp
-//AP上如何恢复出厂设置
 Ruijie#clear ap flash //10.x版本（1b19p2 17x开始支持） 
 Ruijie(config)#apm factory-reset //11.x版本 
 //AP110W/120W/130系列等WALL-AP有reset按键的可以长按设备的reset按钮3秒以上实现恢复出厂配置。
@@ -524,7 +487,6 @@ Proceed with reload? [no]y //键入“y”
 #### 5.1 如何踢在线AP下线
 
 ```cpp
-//如何踢在线AP下线
 Ruijie(config)#ac-controller
 Ruijie(config-ac)#kick-ap ?
   all    Kick all ap Debug. //所有AP
@@ -535,7 +497,6 @@ Ruijie(config-ac)#kick-ap aaaa.aaaa.aaaa
 #### 5.2 如何踢在线用户下线
 
 ```cpp
-//如何踢在线用户下线
 Ruijie(config)#ac-controller
 Ruijie(config-ac)#client-kick ?
   H.H.H  MAC address //单个用户的mac地址
@@ -546,7 +507,6 @@ Ruijie(config-ac)#client-kick aaaa.aaaa.aaaa
 #### 5.3 如何踢web认证用户下线
 
 ```cpp
-//如何踢web认证用户下线
 Ruijie#clear web-auth user ?
   all   Process all users //所有用户
   ip    User ip address //基于认证用户的ip
@@ -558,7 +518,6 @@ Ruijie#clear web-auth user mac aaaa.aaaa.aaaa
 #### 5.4 如何踢802.1x认证用户下线
 
 ```cpp
-//如何踢802.1x认证用户下线
 Ruijie#clear dot1x user ?
   all   All user //所有用户
   ip    Clear user by ip //基于认证用户的ip
@@ -570,7 +529,6 @@ Ruijie#clear dot1x user aaaa.aaaa.aaaa
 #### 5.5 如何在AC上重启AP
 
 ```cpp
-//如何在AC上重启AP
 Ruijie(config)#ac-controller
 Ruijie(config-ac)#reset ?
   all     Reset the all APs in this AC //所有AP
@@ -581,7 +539,6 @@ Ruijie(config-ac)#reset single aaaa.aaaa.aaaa //AP名字
 #### 5.6 如何在AC上给AP恢复出厂设置
 
 ```cpp
-//如何在AC上给AP恢复出厂设置
 Ruijie(config)#ac-controller
 Ruijie(config-ac)#factory-reset ?
   WORD  Set the name //AP名字
@@ -591,7 +548,6 @@ Ruijie(config-ac)#factory-reset AP1
 #### 5.7 胖模式下如何踢用户下线
 
 ```cpp
-//胖模式下如何踢用户下线
 Ruijie(config)#wids
 Ruijie(config-wids)#kickout client ?
   H.H.H  MAC address //用户mac地址
@@ -604,8 +560,7 @@ Ruijie(config-wids)#kickout client aaaa.aaaa.aaaa
 #### 6.1 无线AC如何限制每次提示升级的AP个数？
 
 ```cpp
-//无线AC如何限制每次提示升级的AP个数？ 
-AC全局模式下：
+//AC全局模式下：
 Ruijie(config)#ac-controller  
 Ruijie(config-ac)#capwap upgrade max-concurrent 10  //限制为 10，默认限制15个
 ```
@@ -613,14 +568,12 @@ Ruijie(config-ac)#capwap upgrade max-concurrent 10  //限制为 10，默认限�
 #### 6.2 如何查看AC中有哪些AP的型号和版本（10.x、11.x均支持，前提需开启wlan diag，用于版本升级时查看是否需要升级）
 
 ```cpp
-//如何查看AC中有哪些AP的型号和版本（10.x、11.x均支持，前提需开启wlan diag，用于版本升级时查看是否需要升级） 
 Ruijie#show wlan diag network
 ```
 
 #### 6.3 如何在AC上对单台AP进行升级？
 
 ```cpp
-//如何在AC上对单台AP进行升级？ 
 先把ap 的软件版本传到AC的flash中，然后在AC上进行以下操作。（只对已和AC建立隧道的AP起作用）
 Ruijie(config-ac)#active-bin-file ap1.bin //激活AP软件版本，“ap1.bin”表示ap的版本在AC的flash中保存名称是 ap1.bin 
 Ruijie(config-ac)#ap-serial 320 AP320-I hw-ver 1.x //定义AP的产品系列,名称是320，产品是硬件版本是1.x的AP320-I
@@ -631,7 +584,6 @@ Ruijie(config-ap-config)#ap-image ap1.bin //下发软件版本，版本下发成
 #### 6.4 如何查看AC历史升级记录？
 
 ```cpp
-//如何查看AC历史升级记录？ 
 Ruijie#show upgrade history //在11.x版本通过show upgrade history 命令可查看具体什么时间点，通过哪种方式，升级的文件等
 ```
 
@@ -640,7 +592,6 @@ Ruijie#show upgrade history //在11.x版本通过show upgrade history 命令可�
 #### 7.1 如何在AC上确认无线是本地转发？
 
 ```cpp
-//如何在AC上确认无线是本地转发？
 10.x或者11.x版本
 wlan-config 1 WDDSNNY
  ssid-code utf-8
@@ -662,7 +613,6 @@ SSID Code................................ utf-8
 #### 7.2 如何在ap上确认无线是否为本地转发？
 
 ```cpp
-//如何在ap上确认无线是否为本地转发？
 "10.x版本"
 Ruijie#show run interface dot11radio 1/0.1
 //mac-mode locall 为本地转发
@@ -677,7 +627,6 @@ wlan 1 tunnel local //local为本地转发
 #### 8.1 如何查看配置的基于ssid和全局的黑白名单列表？
 
 ```cpp
-//如何查看配置的基于ssid和全局的黑白名单列表？
 基于全局:
 Ruijie#show wids whitelist //查看白名单
 Ruijie#show wids blacklist static //查看黑名单
@@ -692,7 +641,6 @@ Ruijie#show wids ssid-filter blacklist in-ssid test //查看基于test ssid的�
 #### 8.2 命令行下如何全部删除黑白名单中的终端mac？
 
 ```cpp
-//命令行下如何全部删除黑白名单中的终端mac？
 Ruijie(config)#wids
 Ruijie(config-wids)#reset whitelist all //删除全局白名单下的终端mac
 Ruijie(config-wids)#reset static-blacklist all //删除全局黑名单下的终端mac
@@ -705,7 +653,6 @@ Ruijie(config-wids)#reset ssid-filter in-ssid ruijie //删除基于ruijie ssid�
 #### 9.1 查看某个特定用户是否漫游？
 
 ```cpp
-//查看某个特定用户是否漫游？
 Ruijie#show ac-config client detail aaaa.aaaa.aaaa
 Mac Address         :aaaa.aaaa.aaaa
 IP Address          :192.168.0.100
@@ -721,7 +668,6 @@ AP IP               :192.168.0.120
 #### 9.2 如何查看所有漫游用户？
 
 ```cpp
-//如何查看所有漫游用户？
 Ruijie#show mobility user
 ========= show mobility user =========
 Mobility user number: 0
@@ -736,14 +682,12 @@ aaaa.aaaa.cccc  10.0.0.1                     3     ROC(AC间漫出用户)  2    
 #### 9.3 查看跨AC漫游信息
 
 ```cpp
-//查看跨AC漫游信息
 Ruijie#show mobility status  mgroup_name
 ```
 
 #### 9.4 如何查看AC上MAC为xxx的终端漫游轨迹信息？
 
 ```cpp
-//如何查看AC上MAC为xxx的终端漫游轨迹信息？
 Ruijie#show mobility user roam-track aaaa.aaaa.aaaa
 ID  AC-Info   AP-Info            Online-time(d:h:m:s)
 --  -------   ----------------   --------------------
@@ -762,7 +706,6 @@ ID  AC-Info   AP-Info            Online-time(d:h:m:s)
 #### 10.1 清除通过web认证的用户
 
 ```cpp
-//清除通过web认证的用户
 通过如下命令可以清掉用户：
 Ruijie#clear web-auth user H.H.H //H.H.H 为无线用户mac地址
 ```
@@ -770,7 +713,6 @@ Ruijie#clear web-auth user H.H.H //H.H.H 为无线用户mac地址
 #### 10.2 查看web认证的用户相关信息
 
 ```cpp
-//查看web认证的用户相关信息
 Ruijie#show web-auth user all
 Ruijie#show web-auth user ip 192.168.0.11
 ```
@@ -778,14 +720,12 @@ Ruijie#show web-auth user ip 192.168.0.11
 #### 10.3 显示WEB认证相关控制信息
 
 ```cpp
-//显示WEB认证相关控制信息
 Ruijie#showeb-auth control
 ```
 
 #### 10.4 显示HTTP 重定向的配置
 
 ```cpp
-//显示HTTP 重定向的配置
 Ruijie#show http redirect
 ```
 
