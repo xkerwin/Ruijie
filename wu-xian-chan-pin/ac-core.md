@@ -7,7 +7,7 @@
 
 #### AC配置
 
-```text
+```cpp
 ---AP上线配置---
 
 Ruijie>enable
@@ -47,7 +47,7 @@ Ruijie#wr
 
 #### 核心上配置：
 
-```text
+```cpp
 AP网关和dhcp配置
 
 Ruijie(config)#vlan  10

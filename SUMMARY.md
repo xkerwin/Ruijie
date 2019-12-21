@@ -110,7 +110,7 @@
 * [端口防环](jiao-huan-chan-pin/rldp/README.md)
   * [端口防环路RLDP功能介绍及配置](jiao-huan-chan-pin/rldp/duankou-fang-huan-lu.md)
   * [环路排查方法](jiao-huan-chan-pin/rldp/huan-lu-pai-cha-fang-fa.md)
-* [常用命令](jiao-huan-chan-pin/chang-yong-ming-ling.md)
+* [交换产品常用命令](jiao-huan-chan-pin/chang-yong-ming-ling.md)
 * [交换机Q&A](jiao-huan-chan-pin/jiao-huan-ji-qa.md)
 
 ## 无线产品
