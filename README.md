@@ -1,11 +1,11 @@
 # Home
 
 {% hint style="success" %}
-欢迎访问 Kerwin 的文档中心！
+欢迎访问 Ruijie 技术文档！
 {% endhint %}
 
 {% hint style="info" %}
-要查看文档，请点击侧边栏的相关文章。
+要查看文档，请点击侧边栏的相关文章/搜索关键词。
 {% endhint %}
 
 {% hint style="warning" %}
@@ -13,7 +13,7 @@
 {% endhint %}
 
 {% hint style="danger" %}
-如有出现过时的文档配置，请联系我kerwinkwong@gmail.com
+如有出现过时的文档配置，请联系kerwinkwong@gmail.com更正
 {% endhint %}
 
 
