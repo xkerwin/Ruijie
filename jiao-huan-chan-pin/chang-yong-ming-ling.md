@@ -111,3 +111,15 @@ ssh -l username ip address
 ssh oob -l username ip address
 ```
 
+### 4.重置交换机配置
+
+```cpp
+ruijie#dir //查看交换机的配置文件
+
+ruijie#delete config.text //删除交换机的配置文件
+Do you want to delete [flash:/config.text]? [Y/N]:yes
+
+ruijie#reload //重启交换机生效
+Reload system?(Y/N)yes
+```
+
