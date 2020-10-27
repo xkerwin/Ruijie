@@ -121,6 +121,3 @@
 
 ## 外部链接
 
-* [Document](https://kerwin.gitbook.io/document/)
-* [网络基本功](https://kerwin.gitbook.io/network-basic/)
-
